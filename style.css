@@ -1,0 +1,707 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.download-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #ff9d00aa 0%, #ff3c007a 100%);
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.get-started, .watch-video {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+}
+
+
+
+
+
+
+
+
+/* -----------------------1st left hand mobile view-----------------------------------*/
+
+/* Container Styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+/* Content Wrapper Styles */
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* Smartphone Screen Styles */
+.smartphone {
+    flex: 2; /* Increase flex to make the image larger */
+    margin: 20px;
+    /* background-color: #f0f0f0; */
+    /* border: 1px solid #ccc; */
+    border-radius: 10px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.smartphone img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.smartphone-content {
+    padding: 20px;
+}
+
+/* Feature List Styles */
+.features {
+    flex: 2; /* Adjust flex to balance the layout */
+    margin: 20px;
+    margin-left: 40px; /* Move the content more to the left */
+    font-size: 1em; /* Increase the text size */
+}
+
+.features h2 {
+    color: #333;
+    font-size: 1em; /* Increase the size of the header */
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1em; /* Increase the text size for the list */
+}
+
+.features li {
+    margin-bottom: 20px; /* Add more space between list items */
+    display: flex;
+    flex-direction: column;
+}
+
+.features li span {
+    font-weight: bold;
+    margin-bottom: 5px; /* Add space between the title and the paragraph */
+}
+
+.features li p {
+    margin: 0;
+    font-size: 0.9em; /* Slightly smaller text for the paragraph */
+    color: #666;
+    margin-left: 5px; /* Add space between title and paragraph */
+}
+
+.features li:before {
+    content: "\2605"; /* Unicode for star icon */
+    color: red;
+    margin-right:5px;
+    font-size: 1.5em; /* Increase the size of the star icon */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .smartphone, .features {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .features {
+        font-size: 1em; /* Adjust text size for smaller screens */
+    }
+
+    .features h2 {
+        font-size: 1.5em; /* Adjust header size for smaller screens */
+    }
+
+    .features ul {
+        font-size: 1em; /* Adjust list size for smaller screens */
+    }
+
+    .features li {
+        margin-bottom: 15px; /* Adjust spacing between list items for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* -----------------------right hand mobile view-----------------------------------*/
+
+/* Container Styles */
+.container {
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the row direction to place image on the right */
+    align-items: center;
+    padding: 30px;
+}
+
+/* Content Styles */
+.content {
+    flex: 3;
+    margin-right: 20px;
+    font-size: 1em; /* Increase text size for better readability */
+}
+
+.content h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+.content h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.content p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1em;
+}
+
+.content li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.content li:before {
+    content: "\2605"; /* Unicode for star icon */
+    color: red;
+    margin-right: 10px;
+    font-size: 1.2em; /* Increase the size of the star icon */
+}
+
+/* Image Styles */
+.container img {
+    flex: 2; /* Adjust flex to balance the layout */
+    max-width: 100%; /* Ensure the image does not overflow */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 20px; /* Add space between the image and content */
+    border-radius: 10px; /* Optional: add some border radius for a nicer look */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        margin-right: 0;
+        margin-bottom: 20px; /* Add some space between content and image */
+        font-size: 1em; /* Adjust text size for smaller screens */
+    }
+
+    .content h2 {
+        font-size: 1.5em; /* Adjust header size for smaller screens */
+    }
+
+    .content h3 {
+        font-size: 1.2em; /* Adjust sub-header size for smaller screens */
+    }
+
+    .container img {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+
+
+
+
+/*----------------2nd left hand image----------------------------------------------*/
+
+/* General styles for the container */
+.container-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Style for the image */
+  .container-2 img {
+    max-width: 100%;
+    height: auto;
+    flex: 1;
+  }
+  
+  /* Style for the contents */
+  .contents {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  /* Headings and paragraphs */
+  .contents h4 {
+    margin-bottom: 30px;
+  }
+  
+  .contents p {
+    margin-bottom: 20px;
+  }
+  
+  /* Unordered list style */
+  .contents ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .contents ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .container-2 {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .container-2 img {
+      margin-bottom: 20px;
+    }
+  }
+  
+
+
+
+
+ /*--testimonial--*/
+
+/* Center the h1 heading */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Make the h1 heading responsive */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    h1 {
+        font-size: 32px; /* Adjust font size for medium screens */
+    }
+}
+
+@media (min-width: 1201px) {
+    h1 {
+        font-size: 40px; /* Adjust font size for larger screens */
+    }
+}
+
+
+ .testimonial-container{
+    width: 85%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    padding: 1.7em 1.2em;
+    border: 1px solid #f66335;
+}
+.container button {
+    font-size: 1.7em;
+    height: 2.1em;
+    width: 2.1em;
+    background: #fff;
+    position: absolute;
+    color: #f66335;
+    box-shadow: 0 0 1em rgba(1, 17, 39, 0.25);
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 100px;
+    top: 2500px;
+    bottom: 0;
+    border: none;
+}
+.testimonial-container h3 {
+    color: #2d3d67;
+    font-size: 1em;
+    text-align: center;
+}
+.testimonial-container h6 {
+    color: #bcc4da;
+    font-size: 0.9em;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+    text-align: center;
+}
+.testimonial-container p {
+    color: #8c8c90;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 2em;
+    letter-spacing: 0.05em;
+}
+.testimonial-container img {
+    display: block;
+    margin: 1.8em auto 1.25em auto;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 4.4em;
+    height: 5em;
+}
+button#prev {
+    left: -1.1em;
+}
+button#next {
+    right: -1.1em;
+}
+@media screen and (max-width: 650px) {
+    .container {
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 650px) and (max-width: 400px) {
+        .container button {
+            position: absolute;
+            top: 2770px;
+            margin: 55px;
+
+        }
+    } 
+}
+
+
+/*--------------FAQ-------------------*/
+
+
+.faq-container {
+    background-color: #fff;
+    width: 90%;
+    max-width: 900px; /* Increase max width */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add gap between items */
+    margin: 150px;
+    margin-top: 40px;
+}
+
+.faq-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    width: 48%; /* Adjust width to fit two items in a row */
+}
+
+.faq-item:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.faq-item:nth-child(even) {
+    align-self: flex-end;
+}
+
+.faq-question {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px; /* Increase padding */
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 18px; /* Increase font size */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #0056b3;
+}
+
+.faq-answer {
+    display: none;
+    padding: 20px; /* Increase padding */
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    background-color: #f9f9f9;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .faq-container {
+        width: 100%;
+    }
+
+    .faq-item {
+        width: 100%;
+    }
+
+    .faq-question {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .faq-answer {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+
+
+
+
+
+/*---------------------------footer-----------------------*/
+
+.footer-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px;
+}
+
+footer {
+    color: #000;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-column h2,
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-column p,
+.footer-column ul,
+.footer-column form {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-column a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.footer-column button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer-column button:hover {
+    background-color: #444;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-column form {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer-column input[type="email"] {
+        flex: 1;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    .footer-column button {
+        margin-top: 0;
+    }
+}
